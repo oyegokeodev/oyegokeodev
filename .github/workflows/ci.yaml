@@ -1,0 +1,15 @@
+name: another pipeline
+
+on:
+  pull_request:
+   branches: [main]
+
+jobs:
+  dragon:
+    runs-on: ubuntu-latest
+    steps:
+     - name: just checking
+       run: |
+          echo "learning git" >> name.txt
+          cat name.txt
+        
