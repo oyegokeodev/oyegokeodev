@@ -1,0 +1,12 @@
+name: My test github action pipeline
+
+on:
+  push:
+    branches: [main, develop]
+
+jobs:
+  cleanup:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checking
+        run:  echo "It worked"
