@@ -5,7 +5,7 @@ on:
     branches: [ main ]
   push:
     branches: [ develop, feature/** ]
-  workflow_dispatch
+  workflow_dispatch:
 
 jobs:
   dragon:
