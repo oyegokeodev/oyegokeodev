@@ -6,10 +6,10 @@ on:
 
 jobs:
   dragon:
-  runs_on: ubuntu-latest
-  steps:
-  - name: just checking
-    run: |
-        echo "learning git" >> name.txt
-        cat name.txt
+    runs_on: ubuntu-latest
+    steps:
+     - name: just checking
+       run: |
+          echo "learning git" >> name.txt
+          cat name.txt
         
