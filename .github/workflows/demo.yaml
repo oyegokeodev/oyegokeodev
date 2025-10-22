@@ -10,3 +10,15 @@ jobs:
     steps:
       - name: Checking
         run:  echo "It worked"
+      - name: print runner hostname and IP
+        run: |
+              echo "Runner hostname: $(hostname)"
+              curl http://ipinfo.ip/ip
+      - run: echo "some text" >> cert.txt
+      - name: zip the cert
+        run: zip cert.zip cert.txt
+      - name: upload artifact
+        uses: actions/upload-artifact@v2
+        with:
+          name: cert.zip
+          path: cert.zip
