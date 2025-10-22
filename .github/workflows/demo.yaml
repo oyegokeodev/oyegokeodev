@@ -13,9 +13,9 @@ jobs:
       - name: print runner hostname and IP
         run: |
               echo "Runner hostname: $(hostname)"
-              curl http://ipinfo.ip/ip
-      - run: echo "some text" >> cert.txt
+      - run: echo "The author is ${{ github.actor }}" >> cert.txt
       - name: zip the cert
+        if: always()
         run: zip cert.zip cert.txt
       - name: upload artifact
         uses: actions/upload-artifact@v4
